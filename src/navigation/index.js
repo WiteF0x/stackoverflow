@@ -5,15 +5,16 @@ import { createStackNavigator, createAppContainer } from 'react-navigation';
 import { createNavigationReducer, reduxifyNavigator } from 'react-navigation-redux-helpers';
 
 import HomeScreen from '../screens/home';
+import FullViewScreen from '../screens/FullScreenView'
 
 
 const AppNavigator = createStackNavigator({
   Home: {
     screen: HomeScreen,
   },
-  // FullView: {
-  //   screen: FullViewScreen,
-  // },
+  FullView: {
+    screen: FullViewScreen,
+  },
 }, {
   initialRouteName: 'Home',
   headerMode: 'none',

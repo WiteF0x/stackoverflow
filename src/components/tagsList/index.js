@@ -8,7 +8,7 @@ const QuestionsList = (props) => {
 
   return (
         <FlatList
-            style={{width: '100%'}}
+            style={{width: '100%', flexGrow: 0, flex: 0}}
             horizontal={true}
             data={tags}
             renderItem={info => (

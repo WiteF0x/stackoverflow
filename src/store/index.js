@@ -5,18 +5,18 @@ import { createReactNavigationReduxMiddleware } from 'react-navigation-redux-hel
 import { navigationReducer } from '../navigation';
 import sagas from './sagas';
 import questionsReducer from './reducers/questionsReducer';
+import optionReducer from './reducers/optionReducer';
 
 const rootReducer = combineReducers({
   nav: navigationReducer,
   questionsArray: questionsReducer,
+  options: optionReducer,
 });
 
 const sagaMiddleware = createSagaMiddleware();
-// const navigationMiddleware = createReactNavigationReduxMiddleware('root', state => state.navigation);
 
 const middlewares = composeWithDevTools(
   applyMiddleware(sagaMiddleware),
-  // applyMiddleware(navigationMiddleware),
 );
 
 const store = createStore(
